@@ -1,20 +1,62 @@
 # Bayesian Decision Theory & Neural Network Classification
 
-**MATLAB | Machine Learning | University of Patras**
+**MATLAB** · University of Patras · Machine Learning coursework
 
-Coursework exploring Bayesian statistical decision rules, feed-forward neural-network classification, and binary MNIST experiments. The original experiments were tested by the author; standalone `.m` files extracted from the report appendices have not been independently re-run after extraction.
+MATLAB experiments comparing the Bayes likelihood-ratio decision rule with feed-forward neural classifiers using cross-entropy and exponential objectives, including MNIST 0-vs-8 classification.
 
-## Topics
+## What this project covers
 
-- Bayesian decision theory and probability-density modeling
-- Neural network training and backpropagation
-- Cross-entropy and exponential learning objectives
-- Binary classification on MNIST (digits 0 and 8)
+- Bayes decision rule
+- probability density estimation
+- 2–20–1 neural networks
+- backpropagation
+- cross-entropy vs exponential loss
+- MNIST binary classification
 
-## Running experiments
+## Repository layout
 
-Use MATLAB, add `code/helpers/` to the search path, and run the relevant experiment script. Some experiments need `X0train.mat`, `X1train.mat`, `mnist_train.csv`, or `mnist_test.csv`; third-party datasets are not redistributed.
+- `report/course-report-redacted.pdf` — student-ID-redacted copy of the submitted report with methodology, findings, plots and code appendix
+- Source files:
+  - `code/bayes_test_problem_1.m`
+  - `code/cross_entropy_mnist_problem_2.m`
+  - `code/cross_entropy_problem_1.m`
+  - `code/exponential_mnist_problem_2.m`
+  - `code/exponential_problem_1.m`
+  - `code/helpers/crossEntropyLoss.m`
+  - `code/helpers/derivativePhiCross.m`
+  - `code/helpers/derivativePhiExp.m`
+  - `code/helpers/derivativePsiCross.m`
+  - `code/helpers/derivativePsiExp.m`
+  - `code/helpers/derivativeRelu.m`
+  - `code/helpers/derivativeSigmoid.m`
+  - `code/helpers/expFunc.m`
+  - `code/helpers/hingeLoss.m`
+  - `code/helpers/phiCrossEntropy.m`
+  - `code/helpers/phiExp.m`
+  - `code/helpers/phiHinge.m`
+  - `code/helpers/psiCrossEntropy.m`
+  - `code/helpers/psiExp.m`
+  - `code/helpers/psiHinge.m`
+  - `code/helpers/reluFunc.m`
+  - `code/helpers/sigmoidFunc.m`
 
-## Provenance
+## Getting started
 
-Author: Spiros Bantis, University of Patras. Code was extracted from tested course-report appendices. Check PDF-induced line wrapping before using the standalone copies. Results and plots are documented in the original coursework report.
+In MATLAB, add the `code/helpers/` folder to your path, then open and run an individual `code/*.m` experiment. Some scripts generate their own simulated data; others expect the supplied course datasets.
+
+### Data / software dependencies
+
+- X0train.mat and X1train.mat (when referenced in scripts)
+- mnist_train.csv and mnist_test.csv (for MNIST experiments)
+
+The datasets and any large/generated artifacts have deliberately not been added to version control.
+
+## Technical notes
+
+The Bayes simulation provides a probabilistic reference against which neural classifiers are discussed; reported results are in the PDF.
+
+**Source provenance and execution status:** The original author confirmed that the source code in the assignment was tested. These standalone files were transcribed from the published PDF; visually wrapped lines may need reconciliation against the report before execution.
+
+## Credits
+
+Coursework authored by Spiros Bantis, University of Patras. The report remains the reference for experimental setup and observed results. Refer to the assignment for technical details.
